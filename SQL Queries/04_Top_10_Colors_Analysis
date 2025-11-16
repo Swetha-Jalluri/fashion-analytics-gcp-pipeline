@@ -1,0 +1,10 @@
+-- Top 10 Most Popular Colors
+SELECT 
+  baseColour,
+  COUNT(*) as color_count,
+  ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM `fashion_analytics.products`), 2) as percentage
+FROM `fashion_analytics.products`
+WHERE baseColour IS NOT NULL
+GROUP BY baseColour
+ORDER BY color_count DESC
+LIMIT 10;
