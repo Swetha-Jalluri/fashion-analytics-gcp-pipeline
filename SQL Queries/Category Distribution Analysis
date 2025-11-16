@@ -1,0 +1,8 @@
+-- Category Distribution Analysis
+SELECT 
+  masterCategory,
+  COUNT(*) as total_products,
+  ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM `fashion_analytics.products`), 2) as percentage
+FROM `fashion_analytics.products`
+GROUP BY masterCategory
+ORDER BY total_products DESC;
