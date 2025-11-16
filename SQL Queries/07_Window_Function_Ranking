@@ -1,0 +1,9 @@
+-- Rank Categories by Popularity (Window Function)
+SELECT 
+  masterCategory,
+  COUNT(*) as product_count,
+  RANK() OVER (ORDER BY COUNT(*) DESC) as popularity_rank,
+  ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) as percentage_of_total
+FROM `fashion_analytics.products`
+GROUP BY masterCategory
+ORDER BY popularity_rank;
