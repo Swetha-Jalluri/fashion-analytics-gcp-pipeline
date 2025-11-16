@@ -1,0 +1,10 @@
+-- Use UDF with Window Functions to Analyze Price Ranges
+SELECT 
+  `fashion_analytics.classify_price_range`(productDisplayName) as price_range,
+  masterCategory,
+  COUNT(*) as product_count,
+  RANK() OVER (PARTITION BY masterCategory ORDER BY COUNT(*) DESC) as rank_in_category
+FROM `fashion_analytics.products`
+GROUP BY price_range, masterCategory
+HAVING COUNT(*) > 10
+ORDER BY masterCategory, rank_in_category;
