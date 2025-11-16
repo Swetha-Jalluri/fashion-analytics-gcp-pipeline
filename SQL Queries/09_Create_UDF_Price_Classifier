@@ -1,0 +1,16 @@
+-- Create UDF: Classify Price Range
+CREATE OR REPLACE FUNCTION `fashion_analytics.classify_price_range`(
+  product_name STRING
+)
+RETURNS STRING
+LANGUAGE js AS """
+  var priceMatch = product_name.match(/\\d+/);
+  if (!priceMatch) return 'Unknown';
+  
+  var price = parseInt(priceMatch[0]);
+  
+  if (price < 500) return 'Budget';
+  else if (price < 1500) return 'Mid-Range';
+  else if (price < 3000) return 'Premium';
+  else return 'Luxury';
+""";
