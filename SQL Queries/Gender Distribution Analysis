@@ -1,0 +1,8 @@
+-- Gender Distribution Analysis
+SELECT 
+  gender,
+  COUNT(*) as product_count,
+  ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM `fashion_analytics.products`), 2) as percentage
+FROM `fashion_analytics.products`
+GROUP BY gender
+ORDER BY product_count DESC;
