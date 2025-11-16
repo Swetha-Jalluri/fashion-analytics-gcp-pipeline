@@ -1,0 +1,6 @@
+-- Create Partitioned Table by Year
+CREATE OR REPLACE TABLE `fashion_analytics.products_partitioned`
+PARTITION BY RANGE_BUCKET(year, GENERATE_ARRAY(2011, 2018, 1))
+AS
+SELECT * FROM `fashion_analytics.products`
+WHERE year IS NOT NULL;
