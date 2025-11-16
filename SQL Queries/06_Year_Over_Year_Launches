@@ -1,0 +1,9 @@
+-- Product Launches by Year
+SELECT 
+  year,
+  COUNT(*) as products_launched,
+  COUNT(DISTINCT masterCategory) as categories_active
+FROM `fashion_analytics.products`
+WHERE year IS NOT NULL
+GROUP BY year
+ORDER BY year;
