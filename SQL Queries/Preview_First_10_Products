@@ -1,0 +1,11 @@
+SELECT 
+  id, 
+  gender, 
+  masterCategory, 
+  articleType, 
+  baseColour, 
+  season, 
+  year,
+  productDisplayName
+FROM `fashion_analytics.products` 
+LIMIT 10
