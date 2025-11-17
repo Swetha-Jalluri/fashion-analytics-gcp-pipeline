@@ -19,7 +19,7 @@ Local CSV → GCS Bucket → BigQuery → Looker Studio Dashboard
 - **GCS Bucket:** `gs://fashion-analytics-1763319388`
 - **BigQuery Dataset:** `fashion_analytics`
 - **BigQuery Table:** `products` (44,444 rows)
-- **Dashboard:** [Looker Studio Link]
+- **Dashboard:** https://lookerstudio.google.com/reporting/5b18e98f-f70e-441c-bc2a-324bfe2e0d2f
 
 ---
 
