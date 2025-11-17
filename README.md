@@ -228,7 +228,7 @@ ORDER BY masterCategory, rank_in_category;
 
 ### **Looker Studio Dashboard**
 
-**Dashboard Link:** [INSERT YOUR LINK]
+**Dashboard Link:** https://lookerstudio.google.com/reporting/5b18e98f-f70e-441c-bc2a-324bfe2e0d2f
 
 **Components:**
 
