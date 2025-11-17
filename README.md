@@ -1,11 +1,5 @@
 # Fashion E-Commerce Analytics on GCP
 
-**Author:** Swetha Jalluri  
-**Date:** November 16, 2024  
-**Project:** fashion-analytics-2024
-
----
-
 ## Project Overview
 
 End-to-end data analytics pipeline analyzing **44,444 fashion products** using Google Cloud Platform (GCS, BigQuery, Looker Studio).
