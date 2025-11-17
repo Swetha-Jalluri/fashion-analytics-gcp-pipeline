@@ -230,6 +230,9 @@ ORDER BY masterCategory, rank_in_category;
 
 **Dashboard Link:** https://lookerstudio.google.com/reporting/5b18e98f-f70e-441c-bc2a-324bfe2e0d2f
 
+<img width="1469" height="789" alt="11_final_dashboard" src="https://github.com/user-attachments/assets/0b9df5d4-f841-4be6-b7f0-0a6c7449d1fa" />
+
+
 **Components:**
 
 1. **Scorecards (3):**
